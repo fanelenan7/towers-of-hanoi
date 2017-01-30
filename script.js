@@ -10,21 +10,27 @@ $(".peg").mousedown(function() {
   ($(this).children(".ring").eq(0))
   // ($(".this").children().hasClass("div:first-child"))
    {
-    console.log($(this))
+    // console.log($(this))
   $(function() {
     // $(this).children(".ring").eq(0)
-    $(".ring").draggable({snap: true});
+    $(".ring").eq(0).draggable({grid: [20, 20]});
   })} else {
     return
     }
   })
 $(".peg").mouseup(function() {
-  if ($(this).children(".ring").eq(0)) {
+  if (rings.indexOf($(this).children(".ring").eq(0).attr("id")) < rings.indexOf($(this).children(".peg:first-child").attr("id")) || $(this).children().length === 0) {
     $(function() {
-    $(".peg").droppable();
-  })} else {
+    $(".peg").droppable({
+      accept: ".ring",
+      activeClass: "ui-state-hover",
+      hoverClass: "ui-state-active"
+    });
+    // console.log($(this))
+  })}
+  else {
     $(function() {
-      $(".ring").draggable({revert: "invalid"});
+      $(".ring").eq(0).draggable({revert: true});
     })
   }
 })
