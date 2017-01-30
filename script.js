@@ -1,10 +1,13 @@
-var rings = ["#ring1", "#ring2", "#ring3"]
+var ring1 = $("#ring1")
+var ring2 = $("#ring2")
+var ring3 = $("#ring3")
+var rings = [ring1, ring2, ring3]
 
 $(".ring").click(function() {
-  if ($(this).eq(0)) {
+  if (($(this).css("order")) < ($(this).siblings("rings").css("order"))) {
     console.log($(this))
   // ($(".this").children().hasClass("div:first-child"))
-    $(".ring").eq(0).css("background-color", "rebeccapurple")
+      $(".ring").eq(0).css("background-color", "rebeccapurple")
   } else {
     return
     }
