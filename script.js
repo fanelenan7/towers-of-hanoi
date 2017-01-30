@@ -18,14 +18,19 @@ $(".peg").mousedown(function() {
     return
     }
   })
-$(".peg").mouseup(function() {
-  if (rings.indexOf($(this).children().eq(0).attr("id")) < rings.indexOf($(this).children().first().attr("id")) || $(this).children().length === 0) {
+$(".ring").mouseup(function() {
+  if ($(this).css("order") < $(this).siblings(".rings").css("order") || $(this).siblings().length === 0) {
+  // if (rings.indexOf($(this).children().eq(0).attr("id")) < rings.indexOf($(this).children().first().attr("id")) || $(this).children().length === 0) {
     $(function() {
-    $(".peg").droppable();
-    // console.log($(this))
+      $(".ring").draggable({revert: "invalid"})
+    $(".peg").droppable({
+      accept: ".ring"
+    });
+    $(".peg").prepend($(this))
+    console.log($(this))
   })}
   else {
-    $(".ring").eq(0).draggable({revert: "invalid"})
+    return;
     }
   })
 // })
