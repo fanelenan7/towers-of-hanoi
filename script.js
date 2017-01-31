@@ -1,17 +1,24 @@
 $(document).ready(function(){
 
 var selected = false
-var pegOne = ["#ring1", "#ring2", "#ring3"]
-var pegTwo = []
-var pagThree = []
-
-$(document).click('.ring', function() {
-  if ($(this).inArray(0) {
-    console.log('yay')
-    $(this).addClass('selected')
-})
-}
+var ring1 = $("#ring1")
+var ring2 = $("#ring1")
+var ring3 = $("#ring1")
+var rings = [ring1, ring2, ring3]
+// var topRing = $(".peg").find(":first-child")
 $(".peg").click(function() {
+  if (selected === true) {
   $(this).prepend($(".selected"))
-  $(".selected")
+  console.log('hi')
+  $(".selected").removeClass("selected")
+  // topRing = $(this).find(":first-child")
+  selected = false
+} else {
+  // if (jQuery.inArray(topRing, $(this))) {
+    console.log("bye")
+    $(this).find(":first-child").addClass('selected')
+    selected = true
+  // }
+}
+})
 })

@@ -7,6 +7,7 @@ body {
 .peg {
   background-color: cyan;
   width: 300px;
+  height: 800px;
   /*heigh: 100%;*/
   margin: 10px;
   padding: 30px 10px 30px 10px;
@@ -14,35 +15,64 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
 }
 #ring1 {
-  background-color: red;
+  background-color: #490604;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 60px;
   width: 100px;
-  height: 35px;
-  order: 1;
+  height: 60px;
+  background-image: url(images/disk1.png);
+  background-size: cover;
 }
 #ring2 {
-  background-color: green;
+  background-color: #026C97;
   border: 1px solid black;
-  border-radius: 15px;
-  width: 150px;
-  height: 35px;
-  order: 2;
+  border-radius: 60px;
+  width: 140px;
+  height: 60px;
+  background-image: url(images/disk2.png);
+  background-size: cover;
 }
 #ring3 {
-  background-color: blue;
+  background-color: #06872E;
   border: 1px solid black;
-  border-radius: 20px;
-  width: 200px;
-  height: 35px;
-  order: 3;
+  border-radius: 60px;
+  width: 190px;
+  height: 60px;
+  background-image: url(images/disk3.png);
+  background-size: cover;
 }
-@media (max-width: 500px) {
+#left {
+  background-image: url(images/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#middle {
+  background-image: url(images/bg2.png);
+  background-size: cover;
+}
+#right {
+  background-image: url(images/bg3.png);
+  background-size: cover;
+}
+.selected {
+  border: 2px solid white;
+}
+@media (max-width: 800px) {
   body {
     flex-direction: column;
     align-items: center;
+    height: 600px;
+  }
+  #middle {
+    background-image: url(images/bg4.png);
+    background-size: cover;
+  }
+  #right {
+    background-image: url(images/bg5.png);
+    background-size: cover;
   }
 }
