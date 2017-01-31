@@ -47,7 +47,7 @@ $("#history").hover(function() {
     }
   )
   $("#reset").hover(function() {
-      $(this).css("background-color", "#E94F01").append($("<div class='expand'>This will <i><b>reset</b></i> your game. Are you sure you want to proceed?</div>"))},
+      $(this).css("background-color", "#E94F01").append($("<div class='expand'>This will <i><b>reset</b></i> your game.Are you sure you want to proceed?</div>"))},
       function() {
         $(this).css("background-color", "#fff").find(".expand:last").remove()
       })
