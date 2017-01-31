@@ -1,40 +1,23 @@
 $(document).ready(function(){
 // setting variables
 var selected = false
-var ring1 = $("#ring1")
-var ring2 = $("#ring1")
-var ring3 = $("#ring1")
-ring1 < ring2
-ring2 < ring3
-// var rings = [ring1, ring2, ring3]
-//
-// $(".peg").click(function() {
-//   console.log($(".peg").eq(0))
-//  }
-// )
 
 $(".peg").click(function() {
-  // console.log($(this))
-  // console.log($(this).children().eq(0).text())
-  // console.log($(".peg").children().eq(0).text())
 // conditional
   if (selected === true) {
 // logic
-    if ($(this).children().eq(0).attr("id")) >= $(".peg").children().eq(0).attr("id") || 
+// compare .selected text against the text peg being clicked
+    if (parseInt($(".selected").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0
   ) {
-
+// execute this if logic is met
     $(this).prepend($(".selected"))
-    console.log('hi')
-    $(".selected").removeClass("selected")
-    // topRing = $(this).find(":first-child")
+    $(".selected").removeClass("selected").css("border", "1px solid black")
     selected = false
-
+    }
+// if there is no .selected
   } else {
-    // if (jQuery.inArray(topRing, $(this))) {
-      console.log("bye")
-      $(this).children().eq(0).addClass('selected')
+      $(this).children().eq(0).addClass('selected').css("border", "2px solid white")
       selected = true
-  // }
-}
+    }
 })
 })
