@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Towers of Hanoi</title>
+    <link rel='shortcut icon' type='image/x-icon' href='images/favicon.ico'/>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css">
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -10,19 +11,19 @@
   <body>
     <header>
       <nav>
-        <div class="navbar" id="instructions"><h3>Instructions</h3></div>
-        <div class="navbar" id="history"><h3>History</h3></div>
-        <div class="navbar" id="about"><h3>About</h3></div>
-        <div id="reset"><h3><img src="images/restart.png">Reset</h3></div>
+        <div class="navbar unselectable" id="instructions"><h3>Instructions</h3></div>
+        <div class="navbar unselectable" id="history"><h3>History</h3></div>
+        <div class="navbar unselectable" id="about"><h3>About</h3></div>
+        <div class="unselectable" id="reset"><h3><img src="images/restart.png">Reset</h3></div>
       </nav>
     </header>
     <main>
       <div class="peg" id="left">
-        <div class="ring" id="ring1">1</div>
-        <div class="ring" id="ring2">2</div>
-        <div class="ring" id="ring3">3</div>
-        <div class="ring" id="ring4">4</div>
-        <div class="ring" id="ring5">5</div>
+        <div class="ring unselectable" id="ring1">1</div>
+        <div class="ring unselectable" id="ring2">2</div>
+        <div class="ring unselectable" id="ring3">3</div>
+        <div class="ring unselectable" id="ring4">4</div>
+        <div class="ring unselectable" id="ring5">5</div>
       </div>
       <div class="peg" id="middle">
       </div>
