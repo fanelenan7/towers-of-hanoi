@@ -41,6 +41,7 @@ function clear() {
 }
 // hover instructions and about the game
 // AM: Nice! Like this functionality.
+// AM: Can talk about potential ways to refactor this so you don't have so many listeners during our 1:1.
 $("#instructions").hover(function() {
     $(this).css({
       "background-color": "#F9AB1D",
@@ -69,3 +70,6 @@ $("#history").hover(function() {
 })
 
 // AM: Great job with this! You implemented full Tower of Hanoi functionality with concise code (without comments, ~50 lines!).
+
+// AM: I'm not sure I totally understand your note about listing objects to append in order.
+// AM: Let's talk about that more during our project 1:1.
