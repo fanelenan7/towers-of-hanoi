@@ -1,3 +1,5 @@
+<!-- AM: +1 informative readme -->
+
 Installation instructions:
 
 To install this game on your local machine
@@ -36,4 +38,6 @@ Collaboration and assistance to each other were very important during this proje
 I decided to add class "selected" to the element being clicked and then prepend the element to the desired tower. Using this approach I could take advantage of $(this) object, because my main concern was scalability.
 I started working with only 3 divs to get the logic working, and did not rely on id selectors for the disks. So when I got it working it was just a matter creating more divs and styling them. The logic worked whether there was 3 or 5 elements, and it would work if there is more (except with the reset button, I had to manually input the ids in the order which I wanted the divs to be appended)
 
+<!-- AM: You could keep track of how many moves are being made and increment that number everytime somebody moves a disk. -->
+<!-- AM: The lowest score would be the best score! -->
 I did not tackle the problem of counting the score (no idea how to implement that).

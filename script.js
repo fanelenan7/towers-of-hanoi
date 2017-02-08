@@ -1,16 +1,21 @@
+// AM: With comments, it helps with readbility if you indent then so they begin exactly above where the code they are referencing begins.
+
 $(document).ready(function(){
 // setting variables
 var selected = false
 //reset button
+// AM: Do you need to re-append the rings when the game is reset? Doesn't look like they ever disappear from the game...
 $("#reset").click(function() {
   $("#left").append($("#ring1"), $("#ring2"), $("#ring3"), $("#ring4"), $("#ring5"))
 })
 
 $(".peg").click(function() {
 // conditional
-  if (selected === true) {
+  if (selected === true) {  // AM: You could also write this as if(selected){ ... }
 // logic
 // compare .selected text against the text peg being clicked
+    // AM: When the condition inside of an if-statement gets too long, I start to think about whether it would be helpful to save parts of it to a variable.
+    // AM: For example, it might help with readability here if you save `$(this).children().eq(0)` to a variable at the start of the listener, and then reference that variable whenever you need it later in the listener.
     if (parseInt($(".selected").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0
   ) {
 // execute this if logic is met
@@ -24,6 +29,8 @@ $(".peg").click(function() {
     }
 // if there is no .selected
   } else {
+      // AM: Consider creating a CSS class that contains the border property you wrote below.
+      // AM: That way, instead of having to write out CSS properties and values in your Javascript, you can just say something like `.addClass(plain-border)` (or whatever you want to call it)
       $(this).children().eq(0).addClass('selected').css("border", "2px solid rgba(255, 255, 255, 0.7)")
       selected = true
     }
@@ -33,10 +40,12 @@ function clear() {
   $(this).css("background-color", "#fff").find(".expand:last").remove();
 }
 // hover instructions and about the game
+// AM: Nice! Like this functionality.
 $("#instructions").hover(function() {
     $(this).css({
       "background-color": "#F9AB1D",
       "cursor": "default"
+      // AM: The below chunk of text is very long. Maybe it would be helpful to save it in a separate `.js` file that you can reference.
     }).append($("<div class='expand'><i><b>The Tower of Hanoi</b></i> (also called the Tower of Brahma or Lucas' Tower, and sometimes pluralized) is a mathematical game or puzzle. It consists of three rods, and a number of disks of different sizes which can slide onto any rod. The puzzle starts with the disks in a neat stack in ascending order of size on one rod, the smallest at the top, thus making a conical shape.<br><br>The objective of the puzzle is to move the entire stack to another rod, obeying the following simple rules:<br><ul><li>Only <i>one</i> disk can be moved at a time.<li>Each move consists of taking the upper disk from one of the stacks and placing it on top of another stack i.e. a disk can only be moved if it is the <i>uppermost</i> disk on a stack.<li>No disk may be placed on top of a <i>smaller</i> disk.</ul></div>")) ;
   }, clear)
 $("#history").hover(function() {
@@ -58,3 +67,5 @@ $("#history").hover(function() {
       }).append($("<div class='expand'>This will <i><b>reset</b></i> your game. Are you sure you want to proceed?</div>"))},
       clear)
 })
+
+// AM: Great job with this! You implemented full Tower of Hanoi functionality with concise code (without comments, ~50 lines!).
