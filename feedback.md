@@ -1,6 +1,6 @@
 # Project 1 Evaluation
 
-[inline code comments]()
+[inline code comments](https://github.com/fanelenan7/towers-of-hanoi/pull/1/files)
 
 ## Deployment
 
