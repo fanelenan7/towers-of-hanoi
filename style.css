@@ -1,3 +1,8 @@
+/*
+  AM: Re: your note about styling.
+  AM: I think this app looks great! As you continue to grow as a developer and designer, however, I think you'll come to find ways in which you can improve.
+*/
+
 body {
   display: flex;
   justify-content: space-around;
@@ -6,6 +11,10 @@ body {
   height: 100vh;
   font-family: 'Raleway', sans-serif;
 }
+/*
+  AM: Looks like you're repeating the same flex properties in your stylesheet.
+  AM: Consider creating a separate class (e.g., `flex-space-around`) that you can add to DOM elements whenever you see fit.
+*/
 header {
   display: flex;
   justify-content: space-around;
@@ -61,6 +70,10 @@ h3 {
 .ring {
   color: rgba(0, 0, 0, 0)
 }
+/*
+  AM: Again, there are some properties that all rings share that you repeat.
+  AM: You could put them in a separate `ring` class and save each ring's unique properties for their own id.
+*/
 #ring1 {
   background-color: #490604;
   border: 1px solid black;
