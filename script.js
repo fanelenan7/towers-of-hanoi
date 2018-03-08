@@ -1,5 +1,4 @@
 $(document).ready(function(){
-// setting variables
 var selected = false
 //reset button
 $("#reset").click(function() {
@@ -7,10 +6,8 @@ $("#reset").click(function() {
 })
 
 $(".peg").click(function() {
-// conditional
   if (selected === true) {
-// logic
-// compare .selected text against the text peg being clicked
+// logic - compare .selected text against the text peg being clicked
     if (parseInt($(".selected").eq(0).text()) < parseInt($(this).children().eq(0).text()) || $(this).children().length === 0
   ) {
 // execute this if logic is met

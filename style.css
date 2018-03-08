@@ -27,7 +27,7 @@ img {
 }
 .expand {
   position: absolute;
-  top: 80px;
+  top: 10%;
   background-color: rgba(0, 0, 0, 0.7);
   width: 550px;
   padding: 20px;
