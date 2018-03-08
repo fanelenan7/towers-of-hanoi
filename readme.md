@@ -1,3 +1,5 @@
+You can view deployer project at https://panoramic-snakes.surge.sh
+
 Installation instructions:
 
 To install this game on your local machine
