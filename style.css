@@ -1,45 +1,154 @@
 body {
   display: flex;
   justify-content: space-around;
-  align-items: stretch;
-  /*height: 100%;*/
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Raleway', sans-serif;
 }
+header {
+  display: flex;
+  justify-content: space-around;
+}
+main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+img {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+}
+.expand {
+  position: absolute;
+  top: 10%;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 550px;
+  padding: 20px;
+  height: auto;
+  color: #DDDEDD;
+  font-size: 1.2em;
+  /*font-style: italic;*/
+}
+h3 {
+  text-decoration: none;
+  color: #474847;
+  display: inline;
+  float: right;
+  margin: 20px;
+  flex-grow: 1;
+  }
 .peg {
   background-color: cyan;
-  width: 300px;
-  /*heigh: 100%;*/
+  min-width: 350px;
+  width: auto;
+  height: 450px;
   margin: 10px;
-  padding: 30px 10px 30px 10px;
+  padding-bottom: 150px;
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   flex-grow: 1;
 }
+.ring {
+  color: rgba(0, 0, 0, 0)
+}
 #ring1 {
-  background-color: red;
+  background-color: #490604;
   border: 1px solid black;
-  border-radius: 15px;
+  border-radius: 60px;
   width: 100px;
-  height: 35px;
+  height: 60px;
+  background-image: url(images/disk1.png);
+  background-size: cover;
 }
 #ring2 {
-  background-color: green;
+  background-color: #026C97;
   border: 1px solid black;
-  border-radius: 15px;
-  width: 150px;
-  height: 35px;
+  border-radius: 60px;
+  width: 140px;
+  height: 60px;
+  background-image: url(images/disk2.png);
+  background-size: cover;
 }
 #ring3 {
-  background-color: blue;
+  background-color: #06872E;
   border: 1px solid black;
-  border-radius: 20px;
-  width: 200px;
-  height: 35px;
+  border-radius: 60px;
+  width: 190px;
+  height: 60px;
+  background-image: url(images/disk3.png);
+  background-size: cover;
 }
-@media (max-width: 500px) {
+#ring4 {
+  background-color: #501678;
+  border: 1px solid black;
+  border-radius: 60px;
+  width: 240px;
+  height: 60px;
+  background-image: url(images/disk4.png);
+  background-size: cover;
+}
+#ring5 {
+  background-color: #000;
+  border: 1px solid black;
+  border-radius: 60px;
+  width: 300px;
+  height: 60px;
+  background-image: url(images/disk5.png);
+  background-size: cover;
+}
+#left {
+  background-image: url(images/bg1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#middle {
+  background-image: url(images/bg2.png);
+  background-size: cover;
+}
+#right {
+  background-image: url(images/bg3.png);
+  background-size: cover;
+}
+.selected {
+  border: 2px solid rgba(255, 255, 255, 0.75);
+}
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+@media (max-width: 800px) {
   body {
-    flex-direction: column;
     align-items: center;
+    height: 900px;
+    }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .peg {
+    padding: 15px;
+  }
+  .expand {
+    width: 200px;
+    font-size: 1em
+  }
+  #middle {
+    background-image: url(images/bg4.png);
   }
 }
