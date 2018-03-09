@@ -67,7 +67,7 @@ h3 {
   border-radius: 60px;
   width: 100px;
   height: 60px;
-  background-image: url(images/disk1.jpg);
+  background-image: url(images/disk1.png);
   background-size: cover;
 }
 #ring2 {
@@ -76,7 +76,7 @@ h3 {
   border-radius: 60px;
   width: 140px;
   height: 60px;
-  background-image: url(images/disk2.jpg);
+  background-image: url(images/disk2.png);
   background-size: cover;
 }
 #ring3 {
@@ -85,7 +85,7 @@ h3 {
   border-radius: 60px;
   width: 190px;
   height: 60px;
-  background-image: url(images/disk3.jpg);
+  background-image: url(images/disk3.png);
   background-size: cover;
 }
 #ring4 {
@@ -94,7 +94,7 @@ h3 {
   border-radius: 60px;
   width: 240px;
   height: 60px;
-  background-image: url(images/disk4.jpg);
+  background-image: url(images/disk4.png);
   background-size: cover;
 }
 #ring5 {
@@ -103,7 +103,7 @@ h3 {
   border-radius: 60px;
   width: 300px;
   height: 60px;
-  background-image: url(images/disk5.jpg);
+  background-image: url(images/disk5.png);
   background-size: cover;
 }
 #left {
